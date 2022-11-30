@@ -165,61 +165,31 @@ if (tabs_lin.length > 0 || tabs_for.length > 0) {
     });
   });
 }
-// FIVE
-const tabs_fiv = document.querySelectorAll(".tabs_fiv");
-const tabs_vif = document.querySelectorAll(".tab_inner_fiv");
+// Table
+const tabs_table = document.querySelectorAll(".tabs_table");
+const table_list = document.querySelectorAll(".table_list");
 
-if (tabs_vif.length > 0 || tabs_fiv.length > 0) {
+if (table_list.length > 0 || tabs_table.length > 0) {
   function hideTabContent() {
-    tabs_vif.forEach((item) => {
+    table_list.forEach((item) => {
       item.classList.remove("active");
     });
 
-    tabs_fiv.forEach((item) => {
+    tabs_table.forEach((item) => {
       item.classList.remove("active");
     });
   }
 
   function showTabContent(i = 0) {
-    tabs_vif[i].classList.add("active");
-    tabs_fiv[i].classList.add("active");
+    table_list[i].classList.add("active");
+    tabs_table[i].classList.add("active");
   }
 
   hideTabContent();
   showTabContent();
 
-  tabs_fiv.forEach((tabs_fiv, index) => {
-    tabs_fiv.addEventListener("click", () => {
-      hideTabContent();
-      showTabContent(index);
-    });
-  });
-}
-// SIX
-const tabs_six = document.querySelectorAll(".tabs_six");
-const tabs_xis = document.querySelectorAll(".tab_inner_six");
-
-if (tabs_xis.length > 0 || tabs_six.length > 0) {
-  function hideTabContent() {
-    tabs_xis.forEach((item) => {
-      item.classList.remove("active");
-    });
-
-    tabs_six.forEach((item) => {
-      item.classList.remove("active");
-    });
-  }
-
-  function showTabContent(i = 0) {
-    tabs_xis[i].classList.add("active");
-    tabs_six[i].classList.add("active");
-  }
-
-  hideTabContent();
-  showTabContent();
-
-  tabs_six.forEach((tabs_six, index) => {
-    tabs_six.addEventListener("click", () => {
+  tabs_table.forEach((tabs_table, index) => {
+    tabs_table.addEventListener("click", () => {
       hideTabContent();
       showTabContent(index);
     });
